@@ -6,7 +6,7 @@ const apiRoutes = require('./routes/api')
 const app = express()
 // express() stored in variable 
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 // MIDDLEWARE
 app.use(express.json());
