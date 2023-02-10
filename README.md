@@ -2,10 +2,11 @@
 
 ## Screenshot
 
+![SCREENSHOT](./public/assets/screen.shot/Screen%20Shot%202023-02-09%20at%2010.14.32%20PM.png)
 
 ## Link
 
-
+https://whispering-tundra-25325.herokuapp.com/
 
 ## User Story
 
