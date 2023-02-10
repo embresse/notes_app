@@ -3,14 +3,14 @@ const fs = require('fs')
 // fs allows to write files
 const router = express.Router()
 const path = require('path')
-const uuid = require('./helpers/uuid');
+const uuid = require('../helpers/uuid');
 // handles encrypted data
 // randomUUID generates random value
 
 let db = require('../db/db.json')
 // connects db.json file
 
-router.get('/api/notes', (req, res) => {
+router.get('/notes', (req, res) => {
     console.log(`${req.method} request recieved`)
     let notes = JSON.parse(fs.readFileSync('./db/db.json'))
 
@@ -18,10 +18,10 @@ router.get('/api/notes', (req, res) => {
     console.log('received notes')
 });
 
-router.post('/api/notes', (req, res) => {
+router.post('/notes', (req, res) => {
     console.log(`${req.method} request recieved`)
 
-    const {note_id, title, text} = req.body;
+    const {title, text} = req.body;
 
     const newNote = {
         note_id: uuid(),
